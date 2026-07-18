@@ -26,3 +26,13 @@ export function slugify(text: string) {
     .replace(/^-+/, "") // Trim - from start
     .replace(/-+$/, ""); // Trim - from end
 }
+
+export function formatDate(date: string | Date | number): string {
+  const d = new Date(date);
+  return d.toISOString().replace("T", " ").substring(0, 16); // YYYY-MM-DD HH:MM
+}
+
+export function formatDateShort(date: string | Date | number): string {
+  const d = new Date(date);
+  return d.toISOString().split("T")[0]; // YYYY-MM-DD
+}

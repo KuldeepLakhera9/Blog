@@ -3,6 +3,7 @@
 import React, { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { approveComment, deleteComment } from "@/app/admin/actions";
+import { formatDate } from "@/lib/utils";
 import { Check, Trash2, MessageSquare, ExternalLink, Loader2 } from "lucide-react";
 
 interface Comment {
@@ -136,7 +137,7 @@ export function CommentModerator({ initialComments }: { initialComments: Comment
                       {comment.content}
                     </p>
                     <div className="text-xxs text-neutral-400 pl-1">
-                      {new Date(comment.createdAt).toLocaleString()}
+                      {formatDate(comment.createdAt)}
                     </div>
                   </div>
                 ))
@@ -200,7 +201,7 @@ export function CommentModerator({ initialComments }: { initialComments: Comment
                       {comment.content}
                     </p>
                     <div className="text-xxs text-neutral-400 pl-1">
-                      {new Date(comment.createdAt).toLocaleString()}
+                      {formatDate(comment.createdAt)}
                     </div>
                   </div>
                 ))

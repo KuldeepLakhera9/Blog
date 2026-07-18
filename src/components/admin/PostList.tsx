@@ -4,6 +4,7 @@ import React, { useState, useTransition } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { togglePublishPost, deletePost } from "@/app/admin/actions";
+import { formatDateShort } from "@/lib/utils";
 import {
   Edit2,
   Trash2,
@@ -187,7 +188,7 @@ export function AdminPostList({ initialPosts }: { initialPosts: any[] }) {
                       </button>
                     </td>
                     <td className="px-6 py-4 text-neutral-500 dark:text-neutral-400">
-                      {new Date(post.createdAt).toLocaleDateString()}
+                      {formatDateShort(post.createdAt)}
                     </td>
                     <td className="px-6 py-4 text-right">
                       <div className="flex items-center justify-end gap-2">

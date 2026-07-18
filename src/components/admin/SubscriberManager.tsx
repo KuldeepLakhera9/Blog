@@ -3,6 +3,7 @@
 import React, { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { deleteSubscriber } from "@/app/admin/actions";
+import { formatDate } from "@/lib/utils";
 import { Trash2, Users, Loader2 } from "lucide-react";
 
 interface Subscriber {
@@ -76,7 +77,7 @@ export function SubscriberManager({ initialSubscribers }: { initialSubscribers: 
                       {sub.email}
                     </td>
                     <td className="px-6 py-4 text-neutral-500 dark:text-neutral-400">
-                      {new Date(sub.createdAt).toLocaleString()}
+                      {formatDate(sub.createdAt)}
                     </td>
                     <td className="px-6 py-4 text-right">
                       <button
