@@ -13,6 +13,15 @@ export const authOptions: NextAuthOptions = {
         const adminEmail = process.env.ADMIN_EMAIL;
         const adminPassword = process.env.ADMIN_PASSWORD;
 
+        console.log("Auth attempt details:", {
+          hasAdminEmail: !!adminEmail,
+          hasAdminPassword: !!adminPassword,
+          inputEmail: credentials?.email,
+          emailMatches: credentials?.email === adminEmail,
+          passwordMatches: credentials?.password === adminPassword,
+          secretConfigured: !!process.env.NEXTAUTH_SECRET,
+        });
+
         if (!adminEmail || !adminPassword) {
           console.error("ADMIN_EMAIL or ADMIN_PASSWORD not configured");
           return null;
