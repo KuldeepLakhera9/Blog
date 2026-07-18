@@ -75,7 +75,7 @@ export function CommentModerator({ initialComments }: { initialComments: Comment
       <div className="grid gap-8 lg:grid-cols-2">
         {/* Moderation Queue */}
         <div className="space-y-6">
-          <div className="rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-850 dark:bg-neutral-900 space-y-4">
+          <div className="rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-800 dark:bg-neutral-900 space-y-4">
             <div className="flex items-center justify-between border-b border-neutral-100 pb-3 dark:border-neutral-800">
               <div className="flex items-center gap-2 font-semibold text-neutral-900 dark:text-white">
                 <MessageSquare className="h-5 w-5 text-amber-500" />
@@ -132,7 +132,7 @@ export function CommentModerator({ initialComments }: { initialComments: Comment
                         </button>
                       </div>
                     </div>
-                    <p className="text-sm text-neutral-700 dark:text-neutral-300 bg-neutral-50 dark:bg-neutral-950 p-3 rounded-lg border border-neutral-100 dark:border-neutral-850">
+                    <p className="text-sm text-neutral-700 dark:text-neutral-300 bg-neutral-50 dark:bg-neutral-950 p-3 rounded-lg border border-neutral-100 dark:border-neutral-800">
                       {comment.content}
                     </p>
                     <div className="text-xxs text-neutral-400 pl-1">
@@ -147,7 +147,7 @@ export function CommentModerator({ initialComments }: { initialComments: Comment
 
         {/* Approved Comments */}
         <div className="space-y-6">
-          <div className="rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-850 dark:bg-neutral-900 space-y-4">
+          <div className="rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-800 dark:bg-neutral-900 space-y-4">
             <div className="flex items-center justify-between border-b border-neutral-100 pb-3 dark:border-neutral-800">
               <div className="flex items-center gap-2 font-semibold text-neutral-900 dark:text-white">
                 <MessageSquare className="h-5 w-5 text-green-500" />
@@ -196,7 +196,7 @@ export function CommentModerator({ initialComments }: { initialComments: Comment
                         </button>
                       </div>
                     </div>
-                    <p className="text-sm text-neutral-705 dark:text-neutral-350 bg-neutral-50 dark:bg-neutral-950 p-3 rounded-lg border border-neutral-100 dark:border-neutral-850">
+                    <p className="text-sm text-neutral-700 dark:text-neutral-300 bg-neutral-50 dark:bg-neutral-950 p-3 rounded-lg border border-neutral-100 dark:border-neutral-800">
                       {comment.content}
                     </p>
                     <div className="text-xxs text-neutral-400 pl-1">

@@ -110,7 +110,7 @@ export default async function PublicHomePage({
       </div>
 
       {/* Filter and Search Section */}
-      <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between border-b border-neutral-200 pb-6 dark:border-neutral-850">
+      <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between border-b border-neutral-200 pb-6 dark:border-neutral-800">
         {/* Categories navigation */}
         <div className="flex flex-wrap gap-2">
           <Link
@@ -118,7 +118,7 @@ export default async function PublicHomePage({
             className={`rounded-lg px-3 py-1.5 text-xs font-semibold capitalize border transition-all ${
               !category && !tag
                 ? "bg-neutral-900 border-neutral-900 text-white dark:bg-white dark:border-white dark:text-neutral-950"
-                : "bg-white border-neutral-200 text-neutral-600 hover:bg-neutral-50 dark:bg-neutral-900 dark:border-neutral-805 dark:text-neutral-400 dark:hover:bg-neutral-800"
+                : "bg-white border-neutral-200 text-neutral-600 hover:bg-neutral-50 dark:bg-neutral-900 dark:border-neutral-800 dark:text-neutral-400 dark:hover:bg-neutral-800"
             }`}
           >
             All
@@ -130,7 +130,7 @@ export default async function PublicHomePage({
               className={`rounded-lg px-3 py-1.5 text-xs font-semibold capitalize border transition-all ${
                 category === c.slug
                   ? "bg-neutral-900 border-neutral-900 text-white dark:bg-white dark:border-white dark:text-neutral-950"
-                  : "bg-white border-neutral-200 text-neutral-600 hover:bg-neutral-50 dark:bg-neutral-900 dark:border-neutral-805 dark:text-neutral-400 dark:hover:bg-neutral-800"
+                  : "bg-white border-neutral-200 text-neutral-600 hover:bg-neutral-50 dark:bg-neutral-900 dark:border-neutral-800 dark:text-neutral-400 dark:hover:bg-neutral-800"
               }`}
             >
               {c.name}
@@ -185,23 +185,23 @@ export default async function PublicHomePage({
             return (
               <article
                 key={post.id}
-                className="group relative flex flex-col items-start justify-between rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm hover:border-neutral-300 dark:border-neutral-855 dark:bg-neutral-900 dark:hover:border-neutral-700 transition-all hover:scale-[1.01]"
+                className="group relative flex flex-col items-start justify-between rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm hover:border-neutral-300 dark:border-neutral-900 dark:bg-neutral-900 dark:hover:border-neutral-700 transition-all hover:scale-[1.01]"
               >
                 <div className="w-full space-y-4">
                   <div className="flex items-center gap-x-4 text-xs">
-                    <time dateTime={post.createdAt} className="text-neutral-450 dark:text-neutral-500">
+                    <time dateTime={post.createdAt} className="text-neutral-400 dark:text-neutral-500">
                       {new Date(post.createdAt).toLocaleDateString("en-US", {
                         month: "short",
                         day: "numeric",
                         year: "numeric",
                       })}
                     </time>
-                    <span className="flex items-center gap-1 text-neutral-450 dark:text-neutral-500">
+                    <span className="flex items-center gap-1 text-neutral-400 dark:text-neutral-500">
                       <Clock className="h-3 w-3" />
                       {readingTime} min read
                     </span>
                     {post.category && (
-                      <span className="relative z-10 rounded-full bg-neutral-100 px-3 py-1 font-medium text-neutral-600 dark:bg-neutral-800 dark:text-neutral-305">
+                      <span className="relative z-10 rounded-full bg-neutral-100 px-3 py-1 font-medium text-neutral-600 dark:bg-neutral-800 dark:text-neutral-300">
                         {post.category.name}
                       </span>
                     )}
@@ -225,7 +225,7 @@ export default async function PublicHomePage({
                       <Link
                         key={t.id}
                         href={`/?tag=${t.slug}`}
-                        className="relative z-10 text-xs text-neutral-450 hover:text-neutral-900 dark:text-neutral-500 dark:hover:text-white"
+                        className="relative z-10 text-xs text-neutral-400 hover:text-neutral-900 dark:text-neutral-500 dark:hover:text-white"
                       >
                         #{t.name}
                       </Link>
@@ -243,7 +243,7 @@ export default async function PublicHomePage({
 
       {/* Pagination */}
       {totalPages > 1 && (
-        <div className="flex items-center justify-between border-t border-neutral-200 pt-6 dark:border-neutral-850">
+        <div className="flex items-center justify-between border-t border-neutral-200 pt-6 dark:border-neutral-800">
           <div className="flex flex-1 justify-between sm:hidden">
             <Link
               href={currentPage > 1 ? getPageUrl(currentPage - 1) : "#"}
@@ -272,7 +272,7 @@ export default async function PublicHomePage({
             <div className="flex gap-2">
               <Link
                 href={currentPage > 1 ? getPageUrl(currentPage - 1) : "#"}
-                className={`inline-flex items-center gap-1 rounded-lg border border-neutral-200 bg-white px-3 py-1.5 text-xs font-semibold text-neutral-700 hover:bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-300 dark:hover:bg-neutral-805 transition-colors ${
+                className={`inline-flex items-center gap-1 rounded-lg border border-neutral-200 bg-white px-3 py-1.5 text-xs font-semibold text-neutral-700 hover:bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-300 dark:hover:bg-neutral-800 transition-colors ${
                   currentPage === 1 ? "pointer-events-none opacity-40" : ""
                 }`}
               >
@@ -281,7 +281,7 @@ export default async function PublicHomePage({
               </Link>
               <Link
                 href={currentPage < totalPages ? getPageUrl(currentPage + 1) : "#"}
-                className={`inline-flex items-center gap-1 rounded-lg border border-neutral-200 bg-white px-3 py-1.5 text-xs font-semibold text-neutral-700 hover:bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-300 dark:hover:bg-neutral-805 transition-colors ${
+                className={`inline-flex items-center gap-1 rounded-lg border border-neutral-200 bg-white px-3 py-1.5 text-xs font-semibold text-neutral-700 hover:bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-300 dark:hover:bg-neutral-800 transition-colors ${
                   currentPage === totalPages ? "pointer-events-none opacity-40" : ""
                 }`}
               >

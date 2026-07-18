@@ -96,7 +96,7 @@ export function CategoryTagManager({
       <div className="grid gap-8 lg:grid-cols-2">
         {/* Categories Section */}
         <div className="space-y-6">
-          <div className="rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-850 dark:bg-neutral-900 space-y-4">
+          <div className="rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-800 dark:bg-neutral-900 space-y-4">
             <div className="flex items-center gap-2 font-semibold text-neutral-900 dark:text-white">
               <FolderOpen className="h-5 w-5 text-neutral-500" />
               <h2>Categories</h2>
@@ -110,7 +110,7 @@ export function CategoryTagManager({
                 value={newCategoryName}
                 onChange={(e) => setNewCategoryName(e.target.value)}
                 disabled={isPending}
-                className="flex-1 rounded-lg border border-neutral-300 bg-white px-3 py-2 text-sm text-neutral-900 focus:border-neutral-955 focus:outline-none focus:ring-1 focus:ring-neutral-950 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-50 dark:focus:border-neutral-50 dark:focus:ring-neutral-50"
+                className="flex-1 rounded-lg border border-neutral-300 bg-white px-3 py-2 text-sm text-neutral-900 focus:border-neutral-950 focus:outline-none focus:ring-1 focus:ring-neutral-950 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-50 dark:focus:border-neutral-50 dark:focus:ring-neutral-50"
               />
               <button
                 type="submit"
@@ -142,7 +142,7 @@ export function CategoryTagManager({
                       <span className="font-medium text-neutral-900 dark:text-white">
                         {c.name}
                       </span>
-                      <span className="text-xs text-neutral-450 dark:text-neutral-500">
+                      <span className="text-xs text-neutral-400 dark:text-neutral-500">
                         {c._count.posts} posts • /{c.slug}
                       </span>
                     </div>
@@ -166,7 +166,7 @@ export function CategoryTagManager({
 
         {/* Tags Section */}
         <div className="space-y-6">
-          <div className="rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-850 dark:bg-neutral-900 space-y-4">
+          <div className="rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-800 dark:bg-neutral-900 space-y-4">
             <div className="flex items-center gap-2 font-semibold text-neutral-900 dark:text-white">
               <Tag className="h-5 w-5 text-neutral-500" />
               <h2>Tags</h2>
@@ -191,7 +191,7 @@ export function CategoryTagManager({
                       <span className="font-medium text-neutral-900 dark:text-white">
                         #{t.name}
                       </span>
-                      <span className="text-xs text-neutral-450 dark:text-neutral-500">
+                      <span className="text-xs text-neutral-400 dark:text-neutral-500">
                         {t._count.posts} posts • /{t.slug}
                       </span>
                     </div>

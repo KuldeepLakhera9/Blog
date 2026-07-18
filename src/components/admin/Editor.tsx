@@ -115,9 +115,9 @@ export function TiptapEditor({ content, onChange }: EditorProps) {
   if (!editor) return null;
 
   return (
-    <div className="rounded-xl border border-neutral-200 bg-white overflow-hidden dark:border-neutral-805 dark:bg-neutral-900">
+    <div className="rounded-xl border border-neutral-200 bg-white overflow-hidden dark:border-neutral-800 dark:bg-neutral-900">
       {/* Menu Bar */}
-      <div className="flex flex-wrap gap-1 border-b border-neutral-200 bg-neutral-50/50 p-2 dark:border-neutral-805 dark:bg-neutral-950/50">
+      <div className="flex flex-wrap gap-1 border-b border-neutral-200 bg-neutral-50/50 p-2 dark:border-neutral-800 dark:bg-neutral-950/50">
         <button
           type="button"
           onClick={() => editor.chain().focus().toggleBold().run()}

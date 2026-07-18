@@ -51,7 +51,7 @@ export function CommentForm({ postId }: CommentFormProps) {
   };
 
   return (
-    <div className="rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-850 dark:bg-neutral-900 space-y-4">
+    <div className="rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-800 dark:bg-neutral-900 space-y-4">
       <div className="flex items-center gap-2 font-semibold text-neutral-900 dark:text-white pb-2 border-b border-neutral-100 dark:border-neutral-800">
         <MessageSquare className="h-5 w-5 text-neutral-500" />
         <h3>Leave a Comment</h3>

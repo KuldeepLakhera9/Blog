@@ -33,7 +33,7 @@ function SearchBar() {
         placeholder="Search articles..."
         value={value}
         onChange={(e) => setValue(e.target.value)}
-        className="block w-full rounded-lg border border-neutral-200 bg-white py-1.5 pl-10 pr-8 text-sm text-neutral-900 focus:border-neutral-950 focus:outline-none focus:ring-1 focus:ring-neutral-950 dark:border-neutral-805 dark:bg-neutral-900 dark:text-neutral-50 dark:focus:border-neutral-50 dark:focus:ring-neutral-50"
+        className="block w-full rounded-lg border border-neutral-200 bg-white py-1.5 pl-10 pr-8 text-sm text-neutral-900 focus:border-neutral-950 focus:outline-none focus:ring-1 focus:ring-neutral-950 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-50 dark:focus:border-neutral-50 dark:focus:ring-neutral-50"
       />
       {value && (
         <button

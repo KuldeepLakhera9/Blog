@@ -117,7 +117,7 @@ export function PostForm({ categories, initialPost }: PostFormProps) {
       <div className="grid gap-6 lg:grid-cols-3">
         {/* Main Editor Section */}
         <div className="lg:col-span-2 space-y-6">
-          <div className="rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-805 dark:bg-neutral-900 space-y-4">
+          <div className="rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-800 dark:bg-neutral-900 space-y-4">
             <div>
               <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300">
                 Post Title
@@ -125,7 +125,7 @@ export function PostForm({ categories, initialPost }: PostFormProps) {
               <input
                 type="text"
                 {...register("title")}
-                className="mt-1 block w-full rounded-lg border border-neutral-350 bg-white px-3 py-2 text-sm text-neutral-900 focus:border-neutral-950 focus:outline-none focus:ring-1 focus:ring-neutral-950 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-50 dark:focus:border-neutral-50 dark:focus:ring-neutral-50"
+                className="mt-1 block w-full rounded-lg border border-neutral-300 bg-white px-3 py-2 text-sm text-neutral-900 focus:border-neutral-950 focus:outline-none focus:ring-1 focus:ring-neutral-950 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-50 dark:focus:border-neutral-50 dark:focus:ring-neutral-50"
                 placeholder="Enter title here..."
               />
               {errors.title && (
@@ -144,7 +144,7 @@ export function PostForm({ categories, initialPost }: PostFormProps) {
                   setSlugTouched(true);
                   register("slug").onChange(e);
                 }}
-                className="mt-1 block w-full rounded-lg border border-neutral-350 bg-white px-3 py-2 text-sm text-neutral-900 focus:border-neutral-950 focus:outline-none focus:ring-1 focus:ring-neutral-950 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-50 dark:focus:border-neutral-50 dark:focus:ring-neutral-50"
+                className="mt-1 block w-full rounded-lg border border-neutral-300 bg-white px-3 py-2 text-sm text-neutral-900 focus:border-neutral-950 focus:outline-none focus:ring-1 focus:ring-neutral-950 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-50 dark:focus:border-neutral-50 dark:focus:ring-neutral-50"
                 placeholder="post-url-slug"
               />
               {errors.slug && (
@@ -159,7 +159,7 @@ export function PostForm({ categories, initialPost }: PostFormProps) {
               <textarea
                 {...register("summary")}
                 rows={3}
-                className="mt-1 block w-full rounded-lg border border-neutral-350 bg-white px-3 py-2 text-sm text-neutral-900 focus:border-neutral-950 focus:outline-none focus:ring-1 focus:ring-neutral-950 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-50 dark:focus:border-neutral-50 dark:focus:ring-neutral-50"
+                className="mt-1 block w-full rounded-lg border border-neutral-300 bg-white px-3 py-2 text-sm text-neutral-900 focus:border-neutral-950 focus:outline-none focus:ring-1 focus:ring-neutral-950 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-50 dark:focus:border-neutral-50 dark:focus:ring-neutral-50"
                 placeholder="Write a short summary..."
               />
               {errors.summary && (
@@ -187,7 +187,7 @@ export function PostForm({ categories, initialPost }: PostFormProps) {
 
         {/* Sidebar Configuration Section */}
         <div className="space-y-6">
-          <div className="rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-805 dark:bg-neutral-900 space-y-5">
+          <div className="rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-800 dark:bg-neutral-900 space-y-5">
             <h3 className="text-sm font-semibold text-neutral-900 dark:text-white uppercase tracking-wider">
               Publishing Options
             </h3>
@@ -198,7 +198,7 @@ export function PostForm({ categories, initialPost }: PostFormProps) {
               </label>
               <select
                 {...register("categoryId")}
-                className="mt-1 block w-full rounded-lg border border-neutral-350 bg-white px-3 py-2 text-sm text-neutral-900 focus:border-neutral-950 focus:outline-none focus:ring-1 focus:ring-neutral-950 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-50 dark:focus:border-neutral-50 dark:focus:ring-neutral-50"
+                className="mt-1 block w-full rounded-lg border border-neutral-300 bg-white px-3 py-2 text-sm text-neutral-900 focus:border-neutral-950 focus:outline-none focus:ring-1 focus:ring-neutral-950 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-50 dark:focus:border-neutral-50 dark:focus:ring-neutral-50"
               >
                 <option value="">Uncategorized</option>
                 {categories.map((c) => (
@@ -217,7 +217,7 @@ export function PostForm({ categories, initialPost }: PostFormProps) {
                 type="text"
                 {...register("tagsInput")}
                 placeholder="tech, writing, tutorial"
-                className="mt-1 block w-full rounded-lg border border-neutral-350 bg-white px-3 py-2 text-sm text-neutral-900 focus:border-neutral-950 focus:outline-none focus:ring-1 focus:ring-neutral-950 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-50 dark:focus:border-neutral-50 dark:focus:ring-neutral-50"
+                className="mt-1 block w-full rounded-lg border border-neutral-300 bg-white px-3 py-2 text-sm text-neutral-900 focus:border-neutral-950 focus:outline-none focus:ring-1 focus:ring-neutral-950 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-50 dark:focus:border-neutral-50 dark:focus:ring-neutral-50"
               />
             </div>
 

@@ -48,7 +48,7 @@ export function AdminSidebar() {
                         className={cn(
                           isActive
                             ? "bg-neutral-100 text-neutral-900 dark:bg-neutral-800 dark:text-white"
-                            : "text-neutral-600 hover:bg-neutral-50 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-850 dark:hover:text-white",
+                            : "text-neutral-600 hover:bg-neutral-50 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-white",
                           "group flex gap-x-3 rounded-lg p-2 text-sm font-semibold leading-6 transition-colors"
                         )}
                       >

@@ -45,18 +45,18 @@ export function SubscriberManager({ initialSubscribers }: { initialSubscribers: 
             View and manage your blog newsletter subscriptions.
           </p>
         </div>
-        <span className="rounded-full bg-neutral-100 px-3 py-1 text-xs font-semibold text-neutral-805 dark:bg-neutral-800 dark:text-neutral-300 flex items-center gap-1.5">
+        <span className="rounded-full bg-neutral-100 px-3 py-1 text-xs font-semibold text-neutral-800 dark:bg-neutral-800 dark:text-neutral-300 flex items-center gap-1.5">
           <Users className="h-4 w-4" />
           {subscribers.length} total
         </span>
       </div>
 
       {/* Subscribers Table */}
-      <div className="overflow-hidden rounded-xl border border-neutral-200 bg-white shadow-sm dark:border-neutral-805 dark:bg-neutral-900">
+      <div className="overflow-hidden rounded-xl border border-neutral-200 bg-white shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
         <div className="overflow-x-auto">
           <table className="w-full border-collapse text-left text-sm">
             <thead>
-              <tr className="border-b border-neutral-200 bg-neutral-50/50 text-xs font-semibold text-neutral-500 uppercase tracking-wider dark:border-neutral-805 dark:bg-neutral-955/50 dark:text-neutral-400">
+              <tr className="border-b border-neutral-200 bg-neutral-50/50 text-xs font-semibold text-neutral-500 uppercase tracking-wider dark:border-neutral-800 dark:bg-neutral-950/50 dark:text-neutral-400">
                 <th className="px-6 py-4">Email Address</th>
                 <th className="px-6 py-4">Subscribed Date</th>
                 <th className="px-6 py-4 text-right">Actions</th>

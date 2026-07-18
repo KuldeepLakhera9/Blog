@@ -41,7 +41,7 @@ export function NewsletterSignup() {
   };
 
   return (
-    <div className="rounded-2xl border border-neutral-200 bg-neutral-50/50 p-6 dark:border-neutral-850 dark:bg-neutral-900/50 space-y-4">
+    <div className="rounded-2xl border border-neutral-200 bg-neutral-50/50 p-6 dark:border-neutral-800 dark:bg-neutral-900/50 space-y-4">
       <div className="space-y-1">
         <h3 className="text-base font-semibold text-neutral-900 dark:text-white">
           Subscribe to my newsletter

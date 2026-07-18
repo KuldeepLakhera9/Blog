@@ -109,7 +109,7 @@ export function AdminPostList({ initialPosts }: { initialPosts: any[] }) {
             placeholder="Search by title or category..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="block w-full rounded-lg border border-neutral-200 bg-white py-2 pl-10 pr-3 text-sm text-neutral-900 focus:border-neutral-950 focus:outline-none focus:ring-1 focus:ring-neutral-950 dark:border-neutral-805 dark:bg-neutral-900 dark:text-neutral-50 dark:focus:border-neutral-50 dark:focus:ring-neutral-50"
+            className="block w-full rounded-lg border border-neutral-200 bg-white py-2 pl-10 pr-3 text-sm text-neutral-900 focus:border-neutral-950 focus:outline-none focus:ring-1 focus:ring-neutral-950 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-50 dark:focus:border-neutral-50 dark:focus:ring-neutral-50"
           />
         </div>
         <div className="flex gap-2">
@@ -120,7 +120,7 @@ export function AdminPostList({ initialPosts }: { initialPosts: any[] }) {
               className={`rounded-lg px-3 py-1.5 text-xs font-semibold capitalize border transition-all ${
                 statusFilter === filter
                   ? "bg-neutral-900 border-neutral-900 text-white dark:bg-white dark:border-white dark:text-neutral-950"
-                  : "bg-white border-neutral-200 text-neutral-600 hover:bg-neutral-50 dark:bg-neutral-900 dark:border-neutral-805 dark:text-neutral-400 dark:hover:bg-neutral-800"
+                  : "bg-white border-neutral-200 text-neutral-600 hover:bg-neutral-50 dark:bg-neutral-900 dark:border-neutral-800 dark:text-neutral-400 dark:hover:bg-neutral-800"
               }`}
             >
               {filter}
@@ -130,11 +130,11 @@ export function AdminPostList({ initialPosts }: { initialPosts: any[] }) {
       </div>
 
       {/* Posts Table */}
-      <div className="overflow-hidden rounded-xl border border-neutral-200 bg-white shadow-sm dark:border-neutral-805 dark:bg-neutral-900">
+      <div className="overflow-hidden rounded-xl border border-neutral-200 bg-white shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
         <div className="overflow-x-auto">
           <table className="w-full border-collapse text-left text-sm">
             <thead>
-              <tr className="border-b border-neutral-200 bg-neutral-50/50 text-xs font-semibold text-neutral-500 uppercase tracking-wider dark:border-neutral-805 dark:bg-neutral-950/50 dark:text-neutral-400">
+              <tr className="border-b border-neutral-200 bg-neutral-50/50 text-xs font-semibold text-neutral-500 uppercase tracking-wider dark:border-neutral-800 dark:bg-neutral-950/50 dark:text-neutral-400">
                 <th className="px-6 py-4">Title</th>
                 <th className="px-6 py-4">Category</th>
                 <th className="px-6 py-4">Views</th>
@@ -156,7 +156,7 @@ export function AdminPostList({ initialPosts }: { initialPosts: any[] }) {
                     <td className="px-6 py-4 font-medium text-neutral-900 dark:text-white">
                       <div className="flex flex-col gap-0.5">
                         <span>{post.title}</span>
-                        <span className="text-xs text-neutral-450 dark:text-neutral-500 font-normal">
+                        <span className="text-xs text-neutral-400 dark:text-neutral-500 font-normal">
                           /{post.slug}
                         </span>
                       </div>
@@ -195,7 +195,7 @@ export function AdminPostList({ initialPosts }: { initialPosts: any[] }) {
                           <Link
                             href={`/posts/${post.slug}`}
                             target="_blank"
-                            className="p-1.5 text-neutral-450 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white transition-colors"
+                            className="p-1.5 text-neutral-400 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white transition-colors"
                             title="View Public Post"
                           >
                             <ExternalLink className="h-4 w-4" />
@@ -203,7 +203,7 @@ export function AdminPostList({ initialPosts }: { initialPosts: any[] }) {
                         )}
                         <Link
                           href={`/admin/posts/${post.id}/edit`}
-                          className="p-1.5 text-neutral-450 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white transition-colors"
+                          className="p-1.5 text-neutral-400 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white transition-colors"
                           title="Edit Post"
                         >
                           <Edit2 className="h-4 w-4" />
@@ -211,7 +211,7 @@ export function AdminPostList({ initialPosts }: { initialPosts: any[] }) {
                         <button
                           onClick={() => handleDelete(post.id)}
                           disabled={isPending}
-                          className="p-1.5 text-neutral-450 hover:text-red-600 dark:text-neutral-400 dark:hover:text-red-400 transition-colors"
+                          className="p-1.5 text-neutral-400 hover:text-red-600 dark:text-neutral-400 dark:hover:text-red-400 transition-colors"
                           title="Delete Post"
                         >
                           <Trash2 className="h-4 w-4" />

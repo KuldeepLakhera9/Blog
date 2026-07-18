@@ -122,7 +122,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       {/* Post Header */}
       <header className="space-y-4">
-        <div className="flex flex-wrap items-center gap-3 text-xs text-neutral-450 dark:text-neutral-500">
+        <div className="flex flex-wrap items-center gap-3 text-xs text-neutral-400 dark:text-neutral-500">
           <span className="flex items-center gap-1">
             <Calendar className="h-3.5 w-3.5" />
             {new Date(post.createdAt).toLocaleDateString("en-US", {
@@ -171,13 +171,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       {/* Tags Section */}
       {post.tags.length > 0 && (
-        <div className="flex flex-wrap gap-2 border-t border-b border-neutral-150 py-4 dark:border-neutral-800">
-          <span className="text-sm text-neutral-450 dark:text-neutral-500 font-semibold self-center mr-2">Tags:</span>
+        <div className="flex flex-wrap gap-2 border-t border-b border-neutral-200 py-4 dark:border-neutral-800">
+          <span className="text-sm text-neutral-400 dark:text-neutral-500 font-semibold self-center mr-2">Tags:</span>
           {post.tags.map((tag: any) => (
             <Link
               key={tag.id}
               href={`/?tag=${tag.slug}`}
-              className="inline-flex items-center gap-1 rounded-lg border border-neutral-200 bg-white px-3 py-1 text-xs font-semibold text-neutral-650 hover:bg-neutral-50 dark:border-neutral-805 dark:bg-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800 transition-colors"
+              className="inline-flex items-center gap-1 rounded-lg border border-neutral-200 bg-white px-3 py-1 text-xs font-semibold text-neutral-600 hover:bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800 transition-colors"
             >
               <Tag className="h-3.5 w-3.5" />
               {tag.name}
@@ -187,7 +187,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       )}
 
       {/* Comments List */}
-      <div className="space-y-6 pt-6 border-t border-neutral-200 dark:border-neutral-850">
+      <div className="space-y-6 pt-6 border-t border-neutral-200 dark:border-neutral-800">
         <h3 className="text-xl font-bold text-neutral-900 dark:text-white">
           Comments ({post.comments.length})
         </h3>
@@ -201,10 +201,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             post.comments.map((comment: any) => (
               <div
                 key={comment.id}
-                className="rounded-xl border border-neutral-150 bg-neutral-50/50 p-5 dark:border-neutral-850 dark:bg-neutral-900/50 space-y-2"
+                className="rounded-xl border border-neutral-200 bg-neutral-50/50 p-5 dark:border-neutral-800 dark:bg-neutral-900/50 space-y-2"
               >
                 <div className="flex justify-between items-center">
-                  <span className="font-semibold text-neutral-905 dark:text-white text-sm">
+                  <span className="font-semibold text-neutral-900 dark:text-white text-sm">
                     {comment.authorName}
                   </span>
                   <span className="text-xs text-neutral-400">

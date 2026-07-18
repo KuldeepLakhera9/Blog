@@ -86,7 +86,7 @@ export default async function AdminDashboard() {
         <div>
           <Link
             href="/admin/posts/new"
-            className="inline-flex items-center justify-center gap-1.5 rounded-lg bg-neutral-950 px-4 py-2 text-sm font-semibold text-white hover:bg-neutral-805 dark:bg-white dark:text-neutral-950 dark:hover:bg-neutral-100 transition-colors"
+            className="inline-flex items-center justify-center gap-1.5 rounded-lg bg-neutral-950 px-4 py-2 text-sm font-semibold text-white hover:bg-neutral-800 dark:bg-white dark:text-neutral-950 dark:hover:bg-neutral-100 transition-colors"
           >
             <Plus className="h-4 w-4" />
             New Post
@@ -100,7 +100,7 @@ export default async function AdminDashboard() {
           <Link
             key={card.name}
             href={card.href}
-            className="block rounded-xl border border-neutral-200 bg-white p-6 shadow-sm hover:border-neutral-300 dark:border-neutral-805 dark:bg-neutral-900 dark:hover:border-neutral-700 transition-all hover:scale-[1.02]"
+            className="block rounded-xl border border-neutral-200 bg-white p-6 shadow-sm hover:border-neutral-300 dark:border-neutral-800 dark:bg-neutral-900 dark:hover:border-neutral-700 transition-all hover:scale-[1.02]"
           >
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-neutral-500 dark:text-neutral-400">{card.name}</span>
@@ -117,7 +117,7 @@ export default async function AdminDashboard() {
       </div>
 
       {/* Top Posts Section */}
-      <div className="rounded-xl border border-neutral-200 bg-white shadow-sm dark:border-neutral-805 dark:bg-neutral-900">
+      <div className="rounded-xl border border-neutral-200 bg-white shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
         <div className="flex items-center justify-between border-b border-neutral-100 px-6 py-5 dark:border-neutral-800">
           <h2 className="text-lg font-semibold text-neutral-900 dark:text-white">Popular Posts</h2>
           <Link
