@@ -17,15 +17,15 @@ export default async function AdminLayout({
   }
 
   return (
-    <div className="flex min-h-screen bg-neutral-50 dark:bg-neutral-950">
+    <div className="flex min-h-screen bg-background text-foreground transition-colors duration-300">
       {/* Sidebar */}
       <AdminSidebar />
 
       {/* Main Content Area */}
       <div className="flex-1 flex flex-col min-w-0">
-        <header className="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 border-b border-neutral-200 bg-white px-4 shadow-sm dark:border-neutral-800 dark:bg-neutral-900 sm:gap-x-6 sm:px-6 lg:px-8">
+        <header className="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 border-b border-neutral-200 bg-background px-4 shadow-sm dark:border-neutral-800 sm:gap-x-6 sm:px-6 lg:px-8">
           <div className="flex flex-1 items-center gap-x-4 lg:gap-x-6">
-            <span className="text-sm font-semibold leading-6 text-neutral-950 dark:text-neutral-50">
+            <span className="text-sm font-semibold leading-6 text-foreground">
               Welcome back, Admin
             </span>
           </div>

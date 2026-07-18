@@ -10,9 +10,9 @@ export default function PublicLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex min-h-screen flex-col bg-neutral-50 text-neutral-900 dark:bg-neutral-950 dark:text-neutral-50 transition-colors duration-300">
+    <div className="flex min-h-screen flex-col bg-background text-foreground transition-colors duration-300">
       {/* Header */}
-      <header className="sticky top-0 z-40 w-full border-b border-neutral-200 bg-white/80 backdrop-blur-md dark:border-neutral-800 dark:bg-neutral-900/80 transition-colors">
+      <header className="sticky top-0 z-40 w-full border-b border-neutral-200 bg-background/80 backdrop-blur-md dark:border-neutral-800 transition-colors">
         <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center gap-2 font-bold text-lg">
@@ -43,7 +43,7 @@ export default function PublicLayout({
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-900 transition-colors">
+      <footer className="border-t border-neutral-200 bg-background dark:border-neutral-800 transition-colors">
         <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8 space-y-8">
           <NewsletterSignup />
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-neutral-100 pt-8 dark:border-neutral-800">
